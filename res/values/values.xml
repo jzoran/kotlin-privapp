@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   ~ Licensed under the LICENSE.
+   ~ Copyright (C) 2018, Sony Mobile Communications Inc.
+-->
+<resources>
+  <string name="app_title">Kotlin!!</string>
+  <string name="base">Hello, Kotlin!!</string>
+</resources>
+

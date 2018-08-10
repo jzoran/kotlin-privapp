@@ -1,0 +1,5 @@
+-verbose
+-dontobfuscate
+-keep class com.android.kotlin.Test {
+    *;
+}

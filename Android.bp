@@ -1,0 +1,30 @@
+// Licensed under the LICENSE
+// Copyright (C) 2018, Sony Mobile Communications Inc.
+android_app {
+  name: "Kotlin",
+  manifest: "AndroidManifest.xml",
+  privileged: true,
+
+  srcs: [
+    "src/**/*.kt",
+    "src/**/*.java",
+  ],
+
+  resource_dirs: [
+    "res/",
+  ],
+
+  certificate: "platform",
+
+  static_libs: [
+    "androidx.localbroadcastmanager_localbroadcastmanager",
+  ],
+
+  optimize: {
+    optimize: true,
+    obfuscate: true,
+    proguard_flags_files: [
+      "proguard.flags",
+    ],
+  },
+}
