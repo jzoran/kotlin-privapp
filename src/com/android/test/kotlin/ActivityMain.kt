@@ -16,6 +16,12 @@ import android.widget.TextView
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
+import com.android.internal.telephony.Phone;
+import com.android.internal.telephony.PhoneFactory;
+
+import java.io.PrintWriter
+import java.io.StringWriter
+
 class ActivityMain : Activity() {
 
     override
@@ -50,5 +56,26 @@ class ActivityMain : Activity() {
         // 3. java interop
         val test = Test(this)
         Log.d("ActivityMain", "${test.go()}")
+
+        // 4. verify access to hidden API in a library (e.g. telephony-common)
+        try {
+            val phone = PhoneFactory.getDefaultPhone()
+            phone?.invokeOemRilRequestRaw(null, null)
+            phone.dumpToLog()
+        } catch (e: Exception) {
+            Log.d("ActivityMain", e.message)
+        }
     }
+}
+
+fun Phone.dumpToLog() {
+    dump(null, object : PrintWriter(StringWriter(0)) {
+            override
+            fun println(s: String) {
+                Log.d("ActivityMain", s)
+            }
+
+            override
+            fun flush() {}
+        }, null);
 }

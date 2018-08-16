@@ -20,6 +20,10 @@ android_app {
     "androidx.localbroadcastmanager_localbroadcastmanager",
   ],
 
+  libs: [
+    "telephony-common",
+  ],
+
   optimize: {
     optimize: true,
     obfuscate: true,

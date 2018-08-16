@@ -47,7 +47,6 @@ build. Notably, Kotlin extensions are missing.
 ## Known issues
 (...as of this writing, see date in the commit.)
 ### Library support
-* telephony-common library is not supported out of box yet.
 * Jetbrains' Kotlin Android extensions plugin is not supported.
 * Kotlin extensions libraries from Jetpack are not supported, as they are not part of the
 sdk build of Jetpack.
