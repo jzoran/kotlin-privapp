@@ -4,6 +4,7 @@ android_app {
   name: "Kotlin",
   manifest: "AndroidManifest.xml",
   privileged: true,
+  certificate: "platform",
 
   srcs: [
     "src/**/*.kt",
@@ -13,8 +14,6 @@ android_app {
   resource_dirs: [
     "res/",
   ],
-
-  certificate: "platform",
 
   static_libs: [
     "androidx.localbroadcastmanager_localbroadcastmanager",
