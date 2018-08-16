@@ -4,6 +4,7 @@ android_app {
   name: "Kotlin",
   manifest: "AndroidManifest.xml",
   privileged: true,
+  platform_apis: true,
   certificate: "platform",
 
   srcs: [
