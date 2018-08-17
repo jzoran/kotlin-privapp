@@ -4,7 +4,6 @@
  */
 package com.android.test.kotlin
 
-import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -14,6 +13,7 @@ import android.os.SystemProperties
 import android.util.Log
 import android.widget.TextView
 
+import androidx.appcompat.app.AppCompatActivity
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 import com.android.internal.telephony.Phone;
@@ -22,7 +22,7 @@ import com.android.internal.telephony.PhoneFactory;
 import java.io.PrintWriter
 import java.io.StringWriter
 
-class ActivityMain : Activity() {
+class ActivityMain : AppCompatActivity() {
 
     override
     fun onCreate(savedInstanceState: Bundle?) {

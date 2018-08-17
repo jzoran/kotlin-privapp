@@ -6,7 +6,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.test.kotlin">
 
-    <application android:label="@string/app_title">
+    <application android:label="@string/app_title"
+                 android:theme="@style/Theme.AppCompat">
         <activity android:name=".ActivityMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

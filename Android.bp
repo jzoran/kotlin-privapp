@@ -17,6 +17,7 @@ android_app {
   ],
 
   static_libs: [
+    "androidx.appcompat_appcompat",
     "androidx.localbroadcastmanager_localbroadcastmanager",
   ],
 

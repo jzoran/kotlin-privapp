@@ -50,7 +50,6 @@ build. Notably, Kotlin extensions are missing.
 * Jetbrains' Kotlin Android extensions plugin is not supported.
 * Kotlin extensions libraries from Jetpack are not supported, as they are not part of the
 sdk build of Jetpack.
-* r8 spends a lot of time optimizing with a Jetpack library like androidx.appcompat included.
 
 ## LICENSE
 The project is licensed under the license stated in the [LICENCE.md](LICENSE.md) file of
