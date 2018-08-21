@@ -38,10 +38,10 @@ always get the latest platform build of the support library, e.g.
 As of this writing the version of kotlin used in AOSP is 1.2.50.
 
 ### Jetpack
-* As of this writing the version of Androix libraries is rc01, however with build you will
-always get the latest version so bear that in mind when syncing your repo and building the
+* As of this writing the version of Androidx libraries is 1.0.0-alpha1, however with build you will
+always get the latest version available so bear that in mind when syncing your repo and building the
 application.
-* Unfortunately, not all Jetpack libraries are supported, only those that are part of sdk
+* Unfortunately, not all Jetpack libraries are supported out of box, only those that are part of sdk
 build. Notably, Kotlin extensions are missing.
 
 ## Known issues
