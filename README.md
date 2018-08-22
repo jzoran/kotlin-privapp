@@ -49,11 +49,11 @@ build. Notably, Kotlin extensions are missing.
 
 ### Kotlinc flags
 Soong invokes kotlinc for compilation, so it would be useful to add certain flags,
-e.g. -Werror, -P plugin..., -Xcoroutines=... etc., however this is not supported out of box (the reason
-probably being so that it doesn't conflict with flags already added by Soong).
+e.g. -Werror, -P plugin..., -Xcoroutines=... etc., however this is not supported out of
+box (the reason probably being so that it doesn't conflict with flags already added by Soong).
 
 ### Library support
-* Jetbrains' Kotlin Android extensions plugin is not supported.
+* Kotlinc plugins not supported, e.g. kapt and Kotlin Android extensions plugin
 * Kotlin extensions libraries from Jetpack are not supported, as they are not part of the
 sdk build of Jetpack.
 
