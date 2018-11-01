@@ -22,6 +22,9 @@ import com.android.internal.telephony.PhoneFactory;
 import java.io.PrintWriter
 import java.io.StringWriter
 
+import kotlin.sequences.sequence
+import kotlin.sequences.SequenceScope
+
 class ActivityMain : AppCompatActivity() {
 
     override
@@ -65,6 +68,9 @@ class ActivityMain : AppCompatActivity() {
         } catch (e: Exception) {
             Log.d("ActivityMain", e.message)
         }
+
+        // 5. coroutines
+        lazySeq.forEach { Log.d("ActivityMain", "$it") }
     }
 }
 
@@ -78,4 +84,12 @@ fun Phone.dumpToLog() {
             override
             fun flush() {}
         }, null);
+}
+
+suspend fun SequenceScope<Int>.yieldIfOdd(x: Int) {
+        if (x % 2 != 0) yield(x)
+}
+
+val lazySeq =  sequence<Int> {
+    for (i in 1..10) yieldIfOdd(i)
 }
