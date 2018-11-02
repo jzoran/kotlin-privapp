@@ -53,7 +53,7 @@ e.g. -Werror, -P plugin..., -Xcoroutines=... etc., however this is not supported
 box (the reason probably being so that it doesn't conflict with flags already added by Soong).
 
 The following patch in AOSP:
-https://android-review.googlesource.com/c/platform/build/soong/+/735669/5
+https://android-review.googlesource.com/c/platform/build/soong/+/735669
 adds support for kotlinc flags. See [Android.bp](Android.bp)
 file for usage.
 
