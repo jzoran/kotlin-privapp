@@ -35,7 +35,7 @@ always get the latest platform build of the support library, e.g.
 ## Version
 
 ### Kotlin
-As of this writing the version of kotlin used in AOSP is 1.2.50.
+As of this writing the version of kotlin used in AOSP is 1.3.0.
 
 ### Jetpack
 * As of this writing the version of Androidx libraries is 1.0.0-alpha1, however with build you will
