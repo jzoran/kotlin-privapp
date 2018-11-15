@@ -52,6 +52,11 @@ Soong invokes kotlinc for compilation, so it would be useful to add certain flag
 e.g. -Werror, -P plugin..., -Xcoroutines=... etc., however this is not supported out of
 box (the reason probably being so that it doesn't conflict with flags already added by Soong).
 
+The following patch in AOSP:
+https://android-review.googlesource.com/c/platform/build/soong/+/735669
+adds support for kotlinc flags. See [Android.bp](Android.bp)
+file for usage.
+
 ### Library support
 * Kotlinc plugins not supported, e.g. kapt and Kotlin Android extensions plugin
 * Kotlin extensions libraries from Jetpack are not supported, as they are not part of the

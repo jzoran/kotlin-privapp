@@ -25,6 +25,11 @@ android_app {
     "telephony-common",
   ],
 
+  kotlincflags: [
+    "-Werror",
+    "-verbose",
+  ],
+
   optimize: {
     optimize: true,
     obfuscate: true,
