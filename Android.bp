@@ -26,7 +26,6 @@ android_app {
   ],
 
   kotlincflags: [
-    // -Werror
     "-Werror",
     "-verbose",
   ],
