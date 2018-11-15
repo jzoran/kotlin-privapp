@@ -48,17 +48,17 @@ build. Notably, Kotlin extensions are missing.
 (...as of this writing, see date in the commit.)
 
 ### Kotlinc flags
-Soong invokes kotlinc for compilation, so it would be useful to add certain flags,
-e.g. -Werror, -P plugin..., -Xcoroutines=... etc., however this is not supported out of
-box (the reason probably being so that it doesn't conflict with flags already added by Soong).
-
-The following patch in AOSP:
+Soong invokes kotlinc for compilation, so it is useful to be able to add certain flags,
+e.g. -Werror, -P plugin... etc., and this is now supported out of
+box thanks to the following patch in AOSP:
 https://android-review.googlesource.com/c/platform/build/soong/+/735669
-adds support for kotlinc flags. See [Android.bp](Android.bp)
-file for usage.
+See [Android.bp](Android.bp) file for usage.
+
+Note that the following flags are not allowed: -no-sdk, -no-jdk (they are already set by default),
+-kotlin-home and -Xintellij-plugin-root (default kotlin home is used for consistency of platform builds). 
 
 ### Library support
-* Kotlinc plugins not supported, e.g. kapt and Kotlin Android extensions plugin
+* Kotlinc plugins should be supported via kotlinc flags.
 * Kotlin extensions libraries from Jetpack are not supported, as they are not part of the
 sdk build of Jetpack.
 
