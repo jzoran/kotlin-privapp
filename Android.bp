@@ -4,33 +4,23 @@ android_app {
   name: "Kotlin",
   manifest: "AndroidManifest.xml",
   privileged: true,
-  platform_apis: true,
-  certificate: "platform",
 
-  srcs: [
+   srcs: [
     "src/**/*.kt",
     "src/**/*.java",
   ],
 
-  resource_dirs: [
+   resource_dirs: [
     "res/",
   ],
 
-  static_libs: [
-    "androidx.appcompat_appcompat",
+   certificate: "platform",
+
+   static_libs: [
     "androidx.localbroadcastmanager_localbroadcastmanager",
   ],
 
-  libs: [
-    "telephony-common",
-  ],
-
-  kotlincflags: [
-    "-Werror",
-    "-verbose",
-  ],
-
-  optimize: {
+   optimize: {
     optimize: true,
     obfuscate: true,
     proguard_flags_files: [
